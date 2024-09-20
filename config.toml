@@ -1,9 +1,12 @@
-main.name = "Jacobo"
-main.whitelist = [
+main.name = "Bobby"
+#main.lang = "en"
+main.whitelist = [ "",]
+main.plugins.grid.enabled = true
+main.plugins.grid.report = true
+main.plugins.grid.exclude = [ "",]
 
-]
-main.plugins.bt-tether.enabled = true
-main.plugins.bt-tether.devices.ios-phone.enabled = true
+main.plugins.bt-tether.enabled = false
+main.plugins.bt-tether.devices.ios-phone.enabled = false
 main.plugins.bt-tether.devices.ios-phone.mac = ""
 main.plugins.bt-tether.devices.ios-phone.search_order = 1
 main.plugins.bt-tether.devices.ios-phone.ip = "172.20.10.6"
@@ -41,8 +44,8 @@ main.plugins.gps.enabled = false
 main.plugins.gps.speed = 19200
 main.plugins.gps.device = "/dev/ttyUSB0"
 
-main.plugins.grid.enabled = true
-main.plugins.grid.report = true
+#main.plugins.grid.enabled = false
+#main.plugins.grid.report = false
 
 main.plugins.logtail.enabled = false
 main.plugins.logtail.max-lines = 10000
@@ -96,7 +99,7 @@ main.plugins.agev2.enabled = true
 main.plugins.agev2.age_x_coord = 128
 main.plugins.agev2.age_y_coord = 95
 
-main.plugins.hashieclean.enabled = true
+main.plugins.hashieclean.enabled = false
 main.plugins.memtemp-plus.enabled = true
 main.plugins.memtemp-plus.scale = "celsius"
 main.plugins.memtemp-plus.orientation = "vertical"
@@ -135,25 +138,25 @@ main.log.rotation.enabled = true
 main.log.rotation.size = "10M"
 
 ui.display.enabled = true
-ui.display.type = "waveshare_4"
 ui.display.rotation = 180
+
 ui.invert = true
-ui.web.username = ""
-ui.web.password = ""
+ui.web.username = "changeme"
+ui.web.password = "changeme"
 ui.web.enabled = true
 ui.web.address = "::"
 ui.web.origin = ""
 ui.web.port = 8080
 ui.web.on_frame = ""
 
-ui.fps = 0
+ui.fps = 0.1
 ui.font.name = "DejaVuSansMono"
 ui.font.size_offset = 0
 
-ui.faces.look_r = "/custom-faces/Kirby/LOOK-R.png"
-ui.faces.look_l = "/custom-faces/Kirby/LOOK-L.png"
-ui.faces.look_r_happy = "/custom-faces/Kirby/LOOK-R-HAPPY.png"
-ui.faces.look_l_happy = "/custom-faces/Kirby/LOOK-L-HAPPY.png"
+ui.faces.look_r = "/custom-faces/Kirby/LOOK_R.png"
+ui.faces.look_l = "/custom-faces/Kirby/LOOK_L.png"
+ui.faces.look_r_happy = "/custom-faces/Kirby/LOOK_R_HAPPY.png"
+ui.faces.look_l_happy = "/custom-faces/Kirby/LOOK_L_HAPPY.png"
 ui.faces.sleep = "/custom-faces/Kirby/SLEEP.png"
 ui.faces.sleep2 = "/custom-faces/Kirby/SLEEP2.png"
 ui.faces.awake = "/custom-faces/Kirby/AWAKE.png"
@@ -193,16 +196,7 @@ ai.params.verbose = 1
 personality.advertise = true
 personality.deauth = true
 personality.associate = true
-personality.channels = [
- 3,
- 5,
- 6,
- 7,
- 8,
- 9,
- 11,
- 13,
-]
+personality.channels = []
 personality.min_rssi = -117
 personality.ap_ttl = 106
 personality.sta_ttl = 168
